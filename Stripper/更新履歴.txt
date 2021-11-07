@@ -1,0 +1,41 @@
+﻿2019/11/08 V2.0.0
+　変更：ランタイムを .NET5 へ変更
+　変更：GitHub で公開
+
+2019/11/19 V1.3.0
+　変更：プレビュー画面をメイン画面の中で表示するように変更
+　追加：サンプルにVS2012風とVS2019風カラーテーブルを同梱
+
+2011/11/22 V1.2.1
+　変更：ソース表示を止めクリップボードにコピーするように変更
+
+2011/02/02 V1.2.0
+　追加：サンプルにVS2010風カラーテーブルとOffice2003風カラーテーブルを同梱
+　変更：プロパティの表示方法を英語から日本語に変更
+　変更：画面サイズを変更可能に変更
+　変更：使っていないプロパティの表記方法を変更
+　　　　ButtonCheckedHighlightBorder（未使用）
+　　　　ButtonPressedBorder（未使用）
+　　　　ButtonPressedHighlightBorder（未使用）
+　　　　ButtonSelectedHighlightBorder（未使用）
+　　　　ImageMarginRevealedGradientBegin（未使用）
+　　　　ImageMarginRevealedGradientEnd（未使用）
+　　　　ImageMarginRevealedGradientMiddle（未使用）
+　　　　RaftingContainerGradientBegin（未使用）
+　　　　RaftingContainerGradientEnd（未使用）
+　　　　ToolStripContentPanelGradientBegin（未使用）
+　　　　ButtonCheckedHighlight（UseSystemColorsが true の場合だけ有効）
+　　　　ButtonPressedHighlight（UseSystemColorsが true の場合だけ有効）
+　　　　ButtonSelectedHighlight（UseSystemColorsが true の場合だけ有効）
+
+2011/01/25 V1.1.0
+　追加：ビジュアルスタイルの ON/OFF 切替追加
+　追加：場所確認機能の追加
+　追加：保存機能の追加
+　追加：ソースのコメント出力を追加
+　追加：UseSystemColors プロパティを設定を追加
+　追加：コントロールを ListBox から PropertyGrid に変更
+　追加：保存カラーは常に RBG 形式にするように変更
+
+2011/01/16 V1.0.0
+　公開
