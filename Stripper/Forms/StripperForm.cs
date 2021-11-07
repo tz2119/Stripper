@@ -16,6 +16,9 @@ namespace Stripper.Forms {
         private UserColorTable userColorTableCheck;
         private PreviewForm previewForm;
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public StripperForm() {
             this.InitializeComponent();
             this.userColorTable = new UserColorTable();
@@ -23,6 +26,11 @@ namespace Stripper.Forms {
             this.Text = this.version;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form_Load(object sender, EventArgs e) {
             ToolStripManager.VisualStylesEnabled = true;
             ToolStripManager.RenderMode = ToolStripManagerRenderMode.Professional;
@@ -33,6 +41,11 @@ namespace Stripper.Forms {
             this.btnPreview_Click(null, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPreview_Click(object sender, EventArgs e) {
             if (this.previewForm == null || !this.previewForm.Visible) {
                 // フォーム設定
@@ -52,23 +65,45 @@ namespace Stripper.Forms {
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="c"></param>
         private void setColor(Color c) {
             ToolStripManager.Renderer = new ToolStripProfessionalRenderer(this.userColorTable);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void setHtmlColor() {
             ToolStripManager.Renderer = new ToolStripProfessionalRenderer(this.userColorTable);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void menuExit_Click(object sender, EventArgs e) {
             base.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSource_Click(object sender, EventArgs e) {
             Clipboard.SetDataObject(this.userColorTable.GetSource(), true);
             return;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void menuVisualStyle_Click(object sender, EventArgs e) {
             ToolStripManager.VisualStylesEnabled = !ToolStripManager.VisualStylesEnabled;
             if (this.previewForm != null) {
@@ -77,6 +112,11 @@ namespace Stripper.Forms {
             this.Refresh();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCheck_Click(object sender, EventArgs e) {
             this.btnUndo.Enabled = true;
             this.userColorTableCheck.Check(this.propertyGrid.SelectedGridItem.Label);
@@ -84,6 +124,12 @@ namespace Stripper.Forms {
             ToolStripManager.Renderer = new ToolStripProfessionalRenderer(this.userColorTableCheck);
             this.propertyGrid.Refresh();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUndo_Click(object sender, EventArgs e) {
             this.btnUndo.Enabled = false;
             this.propertyGrid.SelectedObject = this.userColorTable;
@@ -95,6 +141,12 @@ namespace Stripper.Forms {
                 this.previewForm.Refresh();
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOpen_Click(object sender, EventArgs e) {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "カラーテーブル(*.ct)|*.ct|すべてのファイル(*.*)|*.*";
@@ -113,6 +165,11 @@ namespace Stripper.Forms {
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e) {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "カラーテーブル(*.ct)|*.ct|すべてのファイル(*.*)|*.*";
@@ -139,6 +196,10 @@ namespace Stripper.Forms {
                 }
             }
         }
+
+        /// <summary>
+        /// バージョン情報を取得します。
+        /// </summary>
         public string version {
             get {
                 Assembly executingAssembly = Assembly.GetExecutingAssembly();

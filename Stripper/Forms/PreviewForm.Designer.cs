@@ -100,7 +100,6 @@
             this.toolStripContainer.ContentPanel.ContextMenuStrip = this.contextMenuStrip;
             this.toolStripContainer.ContentPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
             this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(561, 265);
-            this.toolStripContainer.ContentPanel.Load += new System.EventHandler(this.toolStripContainer_ContentPanel_Load);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer.Name = "toolStripContainer";
@@ -580,7 +579,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PreviewForm";
             this.Text = "プレビュー";
-            this.Load += new System.EventHandler(this.PreviewForm_Load);
             this.toolStripContainer.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer.TopToolStripPanel.ResumeLayout(false);

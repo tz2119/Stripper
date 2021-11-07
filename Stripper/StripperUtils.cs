@@ -8,7 +8,8 @@ using System.Windows.Forms;
 using System.Diagnostics;
 
 namespace Stripper {
-    class StripperUtils {
+
+    public class StripperUtils {
         public const int WM_MOUSEACTIVATE = 0x21;
         public const int MA_ACTIVATE = 1;
         public const int MA_ACTIVATEANDEAT = 2;

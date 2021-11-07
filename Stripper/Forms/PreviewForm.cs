@@ -11,11 +11,5 @@ namespace Stripper.Forms {
         public PreviewForm() {
             InitializeComponent();
         }
-
-        private void PreviewForm_Load(object sender, EventArgs e) {
-        }
-
-        private void toolStripContainer_ContentPanel_Load(object sender, EventArgs e) {
-        }
     }
 }
