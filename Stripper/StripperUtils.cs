@@ -9,13 +9,22 @@ using System.Diagnostics;
 
 namespace Stripper {
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class StripperUtils {
+
         public const int WM_MOUSEACTIVATE = 0x21;
         public const int MA_ACTIVATE = 1;
         public const int MA_ACTIVATEANDEAT = 2;
         public const int MA_NOACTIVATE = 3;
         public const int MA_NOACTIVATEANDEAT = 4;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static object LoadFromBinaryFile(string path) {
             object obj = null;
             try {
@@ -32,6 +41,11 @@ namespace Stripper {
             return obj;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="path"></param>
         public static void SaveToBinaryFile(object obj, string path) {
             try {
                 FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write);
