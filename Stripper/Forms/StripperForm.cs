@@ -1,12 +1,11 @@
-﻿using Strip;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
 namespace Stripper.Forms {
+
     partial class StripperForm : Form {
 
         private const string FILTER = "カラーテーブル(*.ct)|*.ct|すべてのファイル(*.*)|*.*";
@@ -159,6 +158,7 @@ namespace Stripper.Forms {
             ToolStripManager.Renderer = new ToolStripProfessionalRenderer(this.userColorTable);
             this.propertyGrid.Refresh();
         }
+
         private void propertyGrid_PropertyValueChanged(object s, PropertyValueChangedEventArgs e) {
             if (this.previewForm != null) {
                 this.previewForm.Refresh();
