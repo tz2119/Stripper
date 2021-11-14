@@ -117,6 +117,21 @@ namespace Stripper.Forms {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        private void menuForeColor_Click(object sender, EventArgs e) {
+            ColorDialog cd = new ColorDialog();
+            cd.Color = this.previewForm.menuStrip.ForeColor ;
+            if (cd.ShowDialog() == DialogResult.OK) {
+                this.previewForm.menuStrip.ForeColor = cd.Color;
+                this.previewForm.toolStrip.ForeColor = cd.Color;
+                this.previewForm.statusStrip.ForeColor = cd.Color;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCheck_Click(object sender, EventArgs e) {
             this.btnUndo.Enabled = true;
             this.userColorTableCheck.Check(this.propertyGrid.SelectedGridItem.Label);

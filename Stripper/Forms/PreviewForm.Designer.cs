@@ -26,13 +26,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviewForm));
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
+            this.statusStrip = new Strip.StatusStripEx();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.aToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new Strip.StatusStripEx();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip = new Strip.MenuStripEx();
             this.ファイルFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新規作成NToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,8 +82,8 @@
             this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
-            this.contextMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -98,12 +98,14 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.ContextMenuStrip = this.contextMenuStrip;
+            this.toolStripContainer.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toolStripContainer.ContentPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(561, 265);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(654, 435);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.Size = new System.Drawing.Size(561, 340);
+            this.toolStripContainer.Size = new System.Drawing.Size(654, 510);
             this.toolStripContainer.TabIndex = 2;
             this.toolStripContainer.Text = "toolStripContainer";
             // 
@@ -111,6 +113,24 @@
             // 
             this.toolStripContainer.TopToolStripPanel.Controls.Add(this.menuStrip);
             this.toolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip);
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip.Location = new System.Drawing.Point(0, 0);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.statusStrip.Size = new System.Drawing.Size(654, 23);
+            this.statusStrip.TabIndex = 0;
+            this.statusStrip.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(176, 18);
+            this.toolStripStatusLabel1.Text = "注意：全ての操作は無効です。";
             // 
             // contextMenuStrip
             // 
@@ -147,24 +167,6 @@
             this.cToolStripMenuItem1.Size = new System.Drawing.Size(84, 22);
             this.cToolStripMenuItem1.Text = "C";
             // 
-            // statusStrip
-            // 
-            this.statusStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip.Location = new System.Drawing.Point(0, 0);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip.Size = new System.Drawing.Size(561, 23);
-            this.statusStrip.TabIndex = 0;
-            this.statusStrip.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(176, 18);
-            this.toolStripStatusLabel1.Text = "注意：全ての操作は無効です。";
-            // 
             // menuStrip
             // 
             this.menuStrip.Dock = System.Windows.Forms.DockStyle.None;
@@ -176,7 +178,7 @@
             this.ヘルプHToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(561, 26);
+            this.menuStrip.Size = new System.Drawing.Size(654, 26);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -572,11 +574,12 @@
             // 
             // PreviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 340);
+            this.ClientSize = new System.Drawing.Size(654, 510);
             this.Controls.Add(this.toolStripContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PreviewForm";
             this.Text = "プレビュー";
             this.toolStripContainer.BottomToolStripPanel.ResumeLayout(false);
@@ -585,9 +588,9 @@
             this.toolStripContainer.TopToolStripPanel.PerformLayout();
             this.toolStripContainer.ResumeLayout(false);
             this.toolStripContainer.PerformLayout();
-            this.contextMenuStrip.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            this.contextMenuStrip.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
@@ -599,8 +602,6 @@
 		#endregion
 
 		private System.Windows.Forms.ToolStripContainer toolStripContainer;
-		private Strip.StatusStripEx statusStrip;
-		private Strip.MenuStripEx menuStrip;
 		private System.Windows.Forms.ToolStripMenuItem ファイルFToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 新規作成NToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 開くOToolStripMenuItem;
@@ -630,7 +631,6 @@
 		private System.Windows.Forms.ToolStripMenuItem 検索SToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripMenuItem バージョン情報AToolStripMenuItem;
-		private Strip.ToolStripEx toolStrip;
 		private System.Windows.Forms.ToolStripButton 新規作成NToolStripButton;
 		private System.Windows.Forms.ToolStripButton 上書き保存SToolStripButton;
 		private System.Windows.Forms.ToolStripButton 印刷PToolStripButton;
@@ -652,5 +652,8 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
 		private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-	}
+        public Strip.StatusStripEx statusStrip;
+        public Strip.MenuStripEx menuStrip;
+        public Strip.ToolStripEx toolStrip;
+    }
 }
