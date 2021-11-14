@@ -40,13 +40,13 @@ namespace Stripper.Forms {
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTool = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVisualStyle = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuForeColor = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSource = new System.Windows.Forms.Button();
             this.btnUndo = new System.Windows.Forms.Button();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.btnCheck = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.menuForeColor = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,7 @@ namespace Stripper.Forms {
             this.toolStripSeparator3,
             this.menuExit});
             this.menuFile.Name = "menuFile";
+            this.menuFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.menuFile.Size = new System.Drawing.Size(85, 22);
             this.menuFile.Text = "ファイル(&F)";
             // 
@@ -91,39 +92,41 @@ namespace Stripper.Forms {
             // 
             this.menuOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.menuOpen.Name = "menuOpen";
-            this.menuOpen.Size = new System.Drawing.Size(190, 22);
+            this.menuOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.menuOpen.Size = new System.Drawing.Size(201, 22);
             this.menuOpen.Text = "開く(&O)";
             this.menuOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
             // 
             // menuSave
             // 
             this.menuSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.menuSave.Name = "menuSave";
-            this.menuSave.Size = new System.Drawing.Size(190, 22);
+            this.menuSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.menuSave.Size = new System.Drawing.Size(201, 22);
             this.menuSave.Text = "上書き保存(&S)";
             this.menuSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // menuAsName
             // 
             this.menuAsName.Name = "menuAsName";
-            this.menuAsName.Size = new System.Drawing.Size(190, 22);
+            this.menuAsName.Size = new System.Drawing.Size(201, 22);
             this.menuAsName.Text = "名前を付けて保存(&A)";
             this.menuAsName.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(187, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(198, 6);
             // 
             // menuExit
             // 
             this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(190, 22);
+            this.menuExit.Size = new System.Drawing.Size(201, 22);
             this.menuExit.Text = "終了(&X)";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
@@ -145,6 +148,13 @@ namespace Stripper.Forms {
             this.menuVisualStyle.Size = new System.Drawing.Size(202, 22);
             this.menuVisualStyle.Text = "ビジュアルスタイル(&V)";
             this.menuVisualStyle.Click += new System.EventHandler(this.menuVisualStyle_Click);
+            // 
+            // menuForeColor
+            // 
+            this.menuForeColor.Name = "menuForeColor";
+            this.menuForeColor.Size = new System.Drawing.Size(202, 22);
+            this.menuForeColor.Text = "文字色(&F)";
+            this.menuForeColor.Click += new System.EventHandler(this.menuForeColor_Click);
             // 
             // btnSource
             // 
@@ -213,13 +223,6 @@ namespace Stripper.Forms {
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // menuForeColor
-            // 
-            this.menuForeColor.Name = "menuForeColor";
-            this.menuForeColor.Size = new System.Drawing.Size(202, 22);
-            this.menuForeColor.Text = "文字色(&F)";
-            this.menuForeColor.Click += new System.EventHandler(this.menuForeColor_Click);
-            // 
             // StripperForm
             // 
             this.ClientSize = new System.Drawing.Size(890, 506);
@@ -236,7 +239,7 @@ namespace Stripper.Forms {
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "StripperForm";
-            this.Text = "Stripper V1.1.0";
+            this.Text = "Stripper V0.0.0";
             this.Load += new System.EventHandler(this.Form_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
