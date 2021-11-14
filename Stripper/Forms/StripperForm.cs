@@ -121,9 +121,17 @@ namespace Stripper.Forms {
             ColorDialog cd = new ColorDialog();
             cd.Color = this.previewForm.menuStrip.ForeColor ;
             if (cd.ShowDialog() == DialogResult.OK) {
-                this.previewForm.menuStrip.ForeColor = cd.Color;
                 this.previewForm.toolStrip.ForeColor = cd.Color;
                 this.previewForm.statusStrip.ForeColor = cd.Color;
+                foreach (ToolStripMenuItem menu in this.previewForm.menuStrip.Items) {
+                    menu.ForeColor = cd.Color;
+                    foreach (ToolStripItem item in menu.DropDownItems) {
+                        item.ForeColor = cd.Color;
+                    }
+                }
+                foreach (ToolStripItem item in this.previewForm.contextMenuStrip.Items) {
+                    item.ForeColor = cd.Color;
+                }
             }
         }
 

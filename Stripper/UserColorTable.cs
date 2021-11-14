@@ -9,7 +9,7 @@ using System.Collections;
 namespace Stripper {
     [Serializable()]
     [DefaultProperty("ButtonCheckedGradientBegin")]
-    class UserColorTable : ProfessionalColorTable {
+    public class UserColorTable : ProfessionalColorTable {
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -313,7 +313,7 @@ namespace Stripper {
         [Category("02 ツールバー"), DisplayName("ボタン選択(オン)枠線色"), Description("ButtonSelectedBorder\nButtonSelectedGradientBegin、 ButtonSelectedGradientMiddle、および ButtonSelectedGradientEnd の各色で使用する境界線の色を設定します。")]
         public Color ButtonSelectedBorder2 { get { Color c = this.ColorTable["ButtonSelectedBorder"]; return Color.FromArgb(c.A, c.R, c.G, c.B); } set { this.ColorTable["ButtonSelectedBorder"] = value; } }
 
-        [Category("02 ツールバー"), DisplayName("ボタン選択枠線色(未使用)"), Description("ButtonSelectedHighlightBorder\nButtonSelectedHighlight で使用する境界線の色を設定します。")]
+        [Category("02 ツールバー"), DisplayName("ボタン選択枠線色"), Description("ButtonSelectedHighlightBorder\nButtonSelectedHighlight で使用する境界線の色を設定します。")]
         public Color ButtonSelectedHighlightBorder2 { get { Color c = this.ColorTable["ButtonSelectedHighlightBorder"]; return Color.FromArgb(c.A, c.R, c.G, c.B); } set { this.ColorTable["ButtonSelectedHighlightBorder"] = value; } }
 
         [Category("02 ツールバー"), DisplayName("ボタンオン背景開始色"), Description("ButtonCheckedGradientBegin\nボタンがオンの場合に使用するグラデーションの開始色を設定します。")]
