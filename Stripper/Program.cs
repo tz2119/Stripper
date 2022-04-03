@@ -12,9 +12,9 @@ namespace Stripper {
         /// </summary>
         [STAThread]
         static void Main() {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.Run(new StripperForm());
         }
     }
