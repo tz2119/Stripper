@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel;
-using Strip;
 using System.Windows.Forms;
 using System.Drawing;
 using System;
+using Strips;
+
 namespace Stripper.Forms {
 	partial class StripperForm {
 		/// <summary>
@@ -30,7 +31,7 @@ namespace Stripper.Forms {
 		private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StripperForm));
             this.btnPreview = new System.Windows.Forms.Button();
-            this.menuStrip = new Strip.MenuStripEx();
+            this.menuStrip = new Strips.MenuStripEx();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -46,7 +47,7 @@ namespace Stripper.Forms {
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.btnCheck = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,17 +215,19 @@ namespace Stripper.Forms {
             this.panel1.Size = new System.Drawing.Size(375, 408);
             this.panel1.TabIndex = 7;
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 484);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(890, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 6;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip.Location = new System.Drawing.Point(0, 484);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(890, 22);
+            this.statusStrip.SizingGrip = false;
+            this.statusStrip.TabIndex = 6;
+            this.statusStrip.Text = "statusStrip1";
             // 
             // StripperForm
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(890, 506);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCheck);
@@ -233,7 +236,7 @@ namespace Stripper.Forms {
             this.Controls.Add(this.btnSource);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.menuStrip);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
@@ -265,10 +268,7 @@ namespace Stripper.Forms {
 		private ToolStripSeparator toolStripSeparator3;
 		private ToolStripMenuItem menuExit;
         private Panel panel1;
-        private StatusStrip statusStrip1;
+        private StatusStrip statusStrip;
         private ToolStripMenuItem menuForeColor;
     }
 }
-
-
-

@@ -63,6 +63,7 @@ namespace Stripper {
             this.ColorTable["RaftingContainerGradientEnd"] = renderer.ColorTable.RaftingContainerGradientEnd;
             this.ColorTable["SeparatorDark"] = renderer.ColorTable.SeparatorDark;
             this.ColorTable["SeparatorLight"] = renderer.ColorTable.SeparatorLight;
+            this.ColorTable["StatusStripBorder"] = renderer.ColorTable.StatusStripBorder;
             this.ColorTable["StatusStripGradientBegin"] = renderer.ColorTable.StatusStripGradientBegin;
             this.ColorTable["StatusStripGradientEnd"] = renderer.ColorTable.StatusStripGradientEnd;
             this.ColorTable["ToolStripBorder"] = renderer.ColorTable.ToolStripBorder;
@@ -167,6 +168,8 @@ namespace Stripper {
         public override Color SeparatorDark { get { return this.ColorTable["SeparatorDark"]; } }
         [Browsable(false)]
         public override Color SeparatorLight { get { return this.ColorTable["SeparatorLight"]; } }
+        [Browsable(false)]
+        public override Color StatusStripBorder { get { return this.ColorTable["StatusStripBorder"]; } }
         [Browsable(false)]
         public override Color StatusStripGradientBegin { get { return this.ColorTable["StatusStripGradientBegin"]; } }
         [Browsable(false)]
@@ -358,6 +361,8 @@ namespace Stripper {
         [Category("02 ツールバー"), DisplayName("オーバーフローボタン終了色"), Description("OverflowButtonGradientEnd\nToolStripOverflowButton で使用するグラデーションの終了色を設定します。")]
         public Color OverflowButtonGradientEnd2 { get { Color c = this.ColorTable["OverflowButtonGradientEnd"]; return Color.FromArgb(c.A, c.R, c.G, c.B); } set { this.ColorTable["OverflowButtonGradientEnd"] = value; } }
 
+        [Category("03 ステータスバー"), DisplayName("枠線色"), Description("StatusStripBorder\nStatusStrip の上端に使用する境界線の色を設定します。")]
+        public Color StatusStripBorder2 { get { Color c = this.ColorTable["StatusStripBorder"]; return Color.FromArgb(c.A, c.R, c.G, c.B); } set { this.ColorTable["StatusStripBorder"] = value; } }
 
         [Category("03 ステータスバー"), DisplayName("背景開始色"), Description("StatusStripGradientBegin\nStatusStrip で使用するグラデーションの開始色を設定します。")]
         public Color StatusStripGradientBegin2 { get { Color c = this.ColorTable["StatusStripGradientBegin"]; return Color.FromArgb(c.A, c.R, c.G, c.B); } set { this.ColorTable["StatusStripGradientBegin"] = value; } }
@@ -492,6 +497,8 @@ namespace Stripper {
             sb.Append("        public override Color SeparatorDark { get { return ").Append(getColorString(this.ColorTable["SeparatorDark"])).AppendLine(" } }");
             sb.AppendLine("        // ToolStripSeparator の強調表示効果に使用する色を取得します。");
             sb.Append("        public override Color SeparatorLight { get { return ").Append(getColorString(this.ColorTable["SeparatorLight"])).AppendLine(" } }");
+            sb.AppendLine("        // StatusStrip の上端に使用する境界線の色を取得します。");
+            sb.Append("        public override Color StatusStripBorder { get { return ").Append(getColorString(this.ColorTable["StatusStripBorder"])).AppendLine(" } }");
             sb.AppendLine("        // StatusStrip で使用するグラデーションの開始色を取得します。");
             sb.Append("        public override Color StatusStripGradientBegin { get { return ").Append(getColorString(this.ColorTable["StatusStripGradientBegin"])).AppendLine(" } }");
             sb.AppendLine("        // StatusStrip で使用するグラデーションの終了色を取得します。");

@@ -26,14 +26,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviewForm));
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
-            this.statusStrip = new Strip.StatusStripEx();
+            this.statusStrip = new Strips.StatusStripEx();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.aToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip = new Strip.MenuStripEx();
+            this.menuStrip = new Strips.MenuStripEx();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.新規NToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +63,7 @@
             this.検索SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.バージョン情報AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip = new Strip.ToolStripEx();
+            this.toolStrip = new Strips.ToolStripEx();
             this.新規NToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.開くOToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.保存SToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -548,9 +548,9 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
 		private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        public Strip.StatusStripEx statusStrip;
-        public Strip.MenuStripEx menuStrip;
-        public Strip.ToolStripEx toolStrip;
+        public Strips.StatusStripEx statusStrip;
+        public Strips.MenuStripEx menuStrip;
+        public Strips.ToolStripEx toolStrip;
         private System.Windows.Forms.ToolStripMenuItem menuFile;
         private System.Windows.Forms.ToolStripMenuItem 新規NToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 開くOToolStripMenuItem;

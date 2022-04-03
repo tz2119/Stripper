@@ -1,6 +1,9 @@
-﻿2021/11/14 V2.0.1
+﻿2022/04/04 V2.0.2
+　追加：StatusStripBorder を設定可能にした
+
+2021/11/14 V2.0.1
 　追加：メニューの文字色を変更可能にした　
-　変更：ButtonSelectedHighlightBorderの利用箇所がわかったため、表示文言を変更
+　変更：ButtonSelectedHighlightBorder の利用箇所がわかったため、表示文言を変更
 　変更：ランタイムを .NET6 へ変更
 
 2021/11/08 V2.0.0

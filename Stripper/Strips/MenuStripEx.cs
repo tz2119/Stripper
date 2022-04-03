@@ -6,7 +6,10 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Stripper;
 
-namespace Strip {
+namespace Strips {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MenuStripEx : MenuStrip {
         protected override void WndProc(ref Message m) {
             if (m.Msg == StripperUtils.WM_MOUSEACTIVATE) {

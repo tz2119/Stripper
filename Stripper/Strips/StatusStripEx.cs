@@ -6,8 +6,11 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Stripper;
 
-namespace Strip {
-    public class ToolStripEx : ToolStrip {
+namespace Strips {
+    /// <summary>
+    /// 
+    /// </summary>
+    public class StatusStripEx : StatusStrip {
         protected override void WndProc(ref Message m) {
             if (m.Msg == StripperUtils.WM_MOUSEACTIVATE) {
                 m.Result = new IntPtr(StripperUtils.MA_ACTIVATE);
