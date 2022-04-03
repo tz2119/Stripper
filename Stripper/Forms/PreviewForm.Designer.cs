@@ -351,13 +351,13 @@
             // 
             this.カスタマイズCToolStripMenuItem.CheckOnClick = true;
             this.カスタマイズCToolStripMenuItem.Name = "カスタマイズCToolStripMenuItem";
-            this.カスタマイズCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.カスタマイズCToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.カスタマイズCToolStripMenuItem.Text = "カスタマイズ(&C)";
             // 
             // オプションOToolStripMenuItem
             // 
             this.オプションOToolStripMenuItem.Name = "オプションOToolStripMenuItem";
-            this.オプションOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.オプションOToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.オプションOToolStripMenuItem.Text = "オプション(&O)";
             // 
             // menuHelp
