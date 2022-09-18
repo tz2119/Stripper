@@ -374,18 +374,21 @@
             // 
             // 内容CToolStripMenuItem
             // 
+            this.内容CToolStripMenuItem.CheckOnClick = true;
             this.内容CToolStripMenuItem.Name = "内容CToolStripMenuItem";
             this.内容CToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.内容CToolStripMenuItem.Text = "内容(&C)";
             // 
             // インデックスIToolStripMenuItem
             // 
+            this.インデックスIToolStripMenuItem.CheckOnClick = true;
             this.インデックスIToolStripMenuItem.Name = "インデックスIToolStripMenuItem";
             this.インデックスIToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.インデックスIToolStripMenuItem.Text = "インデックス(&I)";
             // 
             // 検索SToolStripMenuItem
             // 
+            this.検索SToolStripMenuItem.CheckOnClick = true;
             this.検索SToolStripMenuItem.Name = "検索SToolStripMenuItem";
             this.検索SToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.検索SToolStripMenuItem.Text = "検索(&S)";
@@ -397,6 +400,7 @@
             // 
             // バージョン情報AToolStripMenuItem
             // 
+            this.バージョン情報AToolStripMenuItem.CheckOnClick = true;
             this.バージョン情報AToolStripMenuItem.Name = "バージョン情報AToolStripMenuItem";
             this.バージョン情報AToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.バージョン情報AToolStripMenuItem.Text = "バージョン情報(&A)...";
@@ -496,6 +500,7 @@
             // 
             // ヘルプLToolStripButton
             // 
+            this.ヘルプLToolStripButton.CheckOnClick = true;
             this.ヘルプLToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ヘルプLToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ヘルプLToolStripButton.Image")));
             this.ヘルプLToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
